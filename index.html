@@ -77,7 +77,7 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<p><strong>bbsAssistant</strong>: An R package for downloading and handling data and information from the North American Breeding Bird Survey. ================ Last updated: 2020-09-22</p>
+<p><strong>bbsAssistant</strong>: An R package for downloading and handling data and information from the North American Breeding Bird Survey. ================ Last updated: 2020-09-23</p>
 <!-- badges: start -->
 <p><a href="https://github.com/trashbirdecology/bbsAssistant/actions"><img src="https://github.com/trashbirdecology/bbsAssistant/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://doi.org/10.21105/joss.01768"><img src="https://joss.theoj.org/papers/10.21105/joss.01768/status.svg" alt="DOI"></a><a href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg" alt="License: CC0-1.0"></a> <a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-8-lightgrey.svg?style=flat-square" alt="Contributors"></a> <a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-lightgrey.svg" alt="lifecycle"></a> <img src="https://img.shields.io/badge/USGS-Core-lightgrey.svg" alt="usgs"><!-- [![Travis build status](https://travis-ci.org/trashbirdecology/bbsAssistant.svg?branch=main)](https://travis-ci.org/trashbirdecology/bbsAssistant) --><!-- badges: end --><img src="reference/figures/logo.png" align="right" height="140/"></p>
 <div id="alert" class="section level2">
@@ -121,14 +121,14 @@ Burnett et al., (2019). bbsAssistant: An R package for downloading and handling 
 <h2 class="hasAnchor">
 <a href="#quick-start-1" class="anchor"></a>Quick Start</h2>
 <p>Start here to quickly retrieve the most recent version of the BBS observations dataset (this dataset currently contains &gt;6.5 million rows). The BBS datasets are typically released on an annual basis, and comprise the QA/QC’d dataset containing observations from years 1966 to the most recent. <strong>Unless you are reproducing analyses of historical versions of the BBS annual releases, the most recent release should suffice for your purposes.</strong></p>
-<p>We have stored a data package inside <code>bbsAssistant</code> called <strong>bbs_recent</strong> containing the most recent observations dataset. Retrieve as follows:</p>
+<p>We have stored a data package inside <code>bbsAssistant</code> called <strong>bbs_recent</strong> containing the most recent observations dataset. Retrieve the most recent data in the package:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="kw">bbs_obs</span>, package=<span class="st">"bbsAssistant"</span>) <span class="co"># this saves as a promise in environment</span>
-<span class="co"># Not run</span>
-<span class="co">## bbs &lt;- data(bbs_obs, package="bbsAssistant") # this saves as an object in R environment</span>
-
-<span class="co">## sb_id = "5ea04e9a82cefae35a129d65" #specify the item identifier</span>
-<span class="co">## sbtools::item_get_fields(sb_id, "citation") #use sbtools package to easily retrieve the citation for the relevant dataset (internet connection required)</span>
+<span class="kw">data</span> <span class="op">&lt;-</span> <span class="kw">bbsAssistant</span>::<span class="kw"><a href="reference/bbs_obs.html">bbs_obs</a></span>
+</pre></div>
+<p>or download the data files directly:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="kw">sb_id</span> <span class="op">=</span> <span class="st">"5ea04e9a82cefae35a129d65"</span> <span class="co">#specify the item identifier </span>
+<span class="kw">sbtools</span>::<span class="fu"><a href="https://rdrr.io/pkg/sbtools/man/item_get_fields.html">item_get_fields</a></span>(<span class="kw">sb_id</span>, <span class="st">"citation"</span>) <span class="co">#use sbtools package to easily retrieve the citation for the relevant dataset (internet connection required)</span>
 </pre></div>
 </div>
 <div id="bbs-data-availability" class="section level2">
