@@ -128,7 +128,6 @@ Burnett et al., (2019). bbsAssistant: An R package for downloading and handling 
 <p>or download the data files directly:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="kw">sb_id</span> <span class="op">=</span> <span class="st">"5ea04e9a82cefae35a129d65"</span> <span class="co">#specify the item identifier </span>
-<span class="kw">sbtools</span>::<span class="fu"><a href="https://rdrr.io/pkg/sbtools/man/item_get_fields.html">item_get_fields</a></span>(<span class="kw">sb_id</span>, <span class="st">"citation"</span>) <span class="co">#use sbtools package to easily retrieve the citation for the relevant dataset (internet connection required)</span>
 </pre></div>
 </div>
 <div id="bbs-data-availability" class="section level2">
@@ -290,14 +289,48 @@ Burnett et al., (2019). bbsAssistant: An R package for downloading and handling 
 <p><a href="https://github.com/lsw5077"><img src="https://avatars0.githubusercontent.com/u/22730128?s=460&amp;v=4" width="100px;" alt="Lyndsie Wszola"><br><sub><b>Lyndsie Wszola <br>Team Member</b></sub></a><br></p>
 </td>
 </tr></table>
-<!-- ## Contributors  --><!-- Thanks to our contributors: --><!-- <!-- ALL-CONTRIBUTORS-LIST:START--><p>–&gt; <!-- <table> --> <!--   <tr> --> <!--      <td align="center"> --> <!--      <a href="http://ethanwhite.org"><img src="https://avatars0.githubusercontent.com/u/744427?v=4" width="100px;" alt="Ethan White"/><br /><sub><b>Ethan White</b></sub></a><br /> --> <!--      <!-- <a href="#userTesting-Ethan White" title="User Testing">📓</a>  --> –&gt; <!--      <!-- <a href="#review-Ethan White" title="Documentation">📖</a> --> –&gt; <!--      </td> --> <!--       <td align="center"> --> <!--       <a href="https://jsta.rbind.io/"><img src="https://avatars0.githubusercontent.com/u/7844578?s=400&v=4" width="100px;" alt="Joseph Stachelek"/><br /><sub><b>Joseph Stachelek</b></sub></a><br /> --> <!--       <!-- <a href="#userTesting-jsta" title="User Testing">📓</a> --> –&gt; <!--       <!-- <a href="#review-jsta" title="Documentation">📖</a> --> –&gt; <!--       <!-- <a href="#bugs-jsta" title="Bugs">🐛</a> --> –&gt; <!--      </td> --> <!--      <td align="center"> --> <!--      <a href="https://mbjoseph.github.io"><img src="https://avatars3.githubusercontent.com/u/2664564?v=4" width="100px;" alt="Max Joseph"/><br /><sub><b>Max Joseph</b></sub></a><br /> --> <!--      <!-- <a href="https://github.com/TrashBirdEcology/bbsAssistant/commits?author=mbjoseph" title="Documentation">📖</a> --> –&gt; <!--      </td> --> <!--     <td align="center"> --> <!--     <a href="https://github.com/Bisaloo"><img src="https://avatars1.githubusercontent.com/u/10783929?s=460&v=4" width="100px;" alt="Hugh Gruson"/><br /><sub><b>Hugh Gruson</b></sub></a> --> <!--      <!-- <a href="#review-bisaloo" title="Documentation">📖</a> --> –&gt; <!--      </td> --> <!--   </tr> --> <!-- </table> --></p>
-<!-- <!-- ALL-CONTRIBUTORS-LIST:END -->
-<p>Acknowledgments We especially thank the participatory scientists who collect data annually for the North American Breeding Bird Survey, and the Patuxent Wildlife Research Center for making these data publicly and easily accessible. We thank those who have made <a href="https://github.com/TrashBirdEcology/bbsAssistant/graphs/contributors">contributions</a> of all sizes to this project. Finally, we thank two peer reviewers, <a href="www.github.com/ethanwhite">Ethan White</a> and <a href="www.github.com/jsta">Josepha Stachelek</a> whose feedback greatly improved the quality of this software and the <a href="www.github.com/trashbirdecology/bbsassistant/paper/paper.html">associated software paper</a>. <a href="https://github.com/TrashBirdEcology/bbsAssistant/blob/main/man/figures/logo.png">Logo</a> by Gabby Palomo-Munoz.</p>
+</div>
+<div id="acknowledgments" class="section level2">
+<h2 class="hasAnchor">
+<a href="#acknowledgments" class="anchor"></a>Acknowledgments</h2>
+<p>We especially thank the participatory scientists who collect data annually for the North American Breeding Bird Survey, and the Patuxent Wildlife Research Center for making these data publicly and easily accessible. We thank those who have made <a href="https://github.com/TrashBirdEcology/bbsAssistant/graphs/contributors">contributions</a> of all sizes to this project. Finally, we thank two peer reviewers, <a href="www.github.com/ethanwhite">Ethan White</a> and <a href="www.github.com/jsta">Josepha Stachelek</a> whose feedback greatly improved the quality of this software and the <a href="www.github.com/trashbirdecology/bbsassistant/paper/paper.html">associated software paper</a>. <a href="https://github.com/TrashBirdEcology/bbsAssistant/blob/main/man/figures/logo.png">Logo</a> by Gabby Palomo-Munoz.</p>
 <p>This software has been approved for release by the U.S. Geological Survey (USGS). Although the software has been subjected to rigorous review, the USGS reserves the right to update the software as needed pursuant to further analysis and review. No warranty, expressed or implied, is made by the USGS or the U.S. Government as to the functionality of the software and related material nor shall the fact of release constitute any such warranty. Furthermore, the software is released on condition that neither the USGS nor the U.S. Government shall be held liable for any damages resulting from its authorized or unauthorized use.</p>
 </div>
-<div id="references" class="section level2">
+<div id="how-to-cite-the-data" class="section level2">
 <h2 class="hasAnchor">
-<a href="#references" class="anchor"></a>References</h2>
+<a href="#how-to-cite-the-data" class="anchor"></a>How to Cite the Data</h2>
+<p>Easily retrieve the text citation for the specified dataset using <code>sbtools</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="kw">sbtools</span>::<span class="fu"><a href="https://rdrr.io/pkg/sbtools/man/item_get_fields.html">item_get_fields</a></span>(<span class="kw">sb_id</span>, <span class="st">"citation"</span>)
+</pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">## [1] "Pardieck, K.L., Ziolkowski Jr., D.J., Lutmerding, M., Aponte, V.I., and Hudson, M-A.R., 2020, North American Breeding Bird Survey Dataset 1966 - 2019: U.S. Geological Survey data release, https://doi.org/10.5066/P9J6QUF6."</span></span></code></pre></div>
+<p>If you use the package data, the text citations are available in the package citation file:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span>(<span class="st">"bbsAssistant"</span>)
+</pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">## </span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="co">## To cite the R package bbsAssistant, please use: To cite the most recent</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="co">## version of the Breeding Bird Survey dataset, please use: To cite a</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co">## different version of the Breeding Bird Survey dataset, please visit the</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="co">## [project</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="co">## page](https://www.sciencebase.gov/catalog/item/52b1dfa8e4b0d9b325230cd9).</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="co">## </span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="co">##   Burnett, J.L., L.S. Wszola, and G. Palomo-Muñoz (2019). bbsAssistant:</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="co">##   An R package for downloading and handling data and information from</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="co">##   the North American Breeding Bird Survey. Journal of Open Source</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="co">##   Software. DOI:10.21105/joss.01768</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="co">## </span></span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="co">##   Pardieck, K.L., Ziolkowski Jr., D.J., Lutmerding, M., Aponte, V.I.,</span></span>
+<span id="cb7-14"><a href="#cb7-14"></a><span class="co">##   and Hudson, M-A.R., 2020, North American Breeding Bird Survey Dataset</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a><span class="co">##   1966 - 2019: U.S. Geological Survey data release,</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a><span class="co">##   https://doi.org/10.5066/P9J6QUF6</span></span>
+<span id="cb7-17"><a href="#cb7-17"></a><span class="co">## </span></span>
+<span id="cb7-18"><a href="#cb7-18"></a><span class="co">## To see these entries in BibTeX format, use 'print(&lt;citation&gt;,</span></span>
+<span id="cb7-19"><a href="#cb7-19"></a><span class="co">## bibtex=TRUE)', 'toBibtex(.)', or set</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a><span class="co">## 'options(citation.bibtex.max=999)'.</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit">
+<span class="co"># print(citation("bbsAssistant"), bibtex=TRUE)# for bibtex</span>
+</pre></div>
 </div>
 
   </div>
