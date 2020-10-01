@@ -47,7 +47,7 @@
 
 
 <meta property="og:title" content="Read BBS data from local file into R environment. — import_bbs_data" />
-<meta property="og:description" content="Called inside get_bbs_data() but can be used independently if the user provides correct sb_dir." />
+<meta property="og:description" content="Called inside get_bbs_data() but can be used independently if the user has already downloaded the data and provides the correct location for sb_dir." />
 <meta property="og:image" content="http://trashbirdecology.github.io/bbsAssistant/logo.png" />
 
 
@@ -137,14 +137,18 @@
     </div>
 
     <div class="ref-description">
-    <p>Called inside <code><a href='get_bbs_data.html'>get_bbs_data()</a></code> but can be used independently if the user provides correct sb_dir.</p>
+    <p>Called inside <code><a href='get_bbs_data.html'>get_bbs_data()</a></code> but can be used independently if the user has already downloaded the data and provides the correct location for sb_dir.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>import_bbs_data</span><span class='op'>(</span><span class='va'>sb_dir</span>, state <span class='op'>=</span> <span class='cn'>NULL</span>, country <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>import_bbs_data</span><span class='op'>(</span><span class='va'>sb_id</span>, <span class='va'>sb_dir</span>, state <span class='op'>=</span> <span class='cn'>NULL</span>, country <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>sb_id</th>
+      <td><p>Identifier for SB item</p></td>
+    </tr>
     <tr>
       <th>sb_dir</th>
       <td><p>Directory location for the ScienceBase item.</p></td>

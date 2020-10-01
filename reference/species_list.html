@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • bbsAssistant</title>
+<title>Taxonomic information from teh American Ornithological Society's AOU code. — species_list • bbsAssistant</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,7 +46,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Taxonomic information from teh American Ornithological Society's AOU code. — species_list" />
+<meta property="og:description" content="Taxonomic information from teh American Ornithological Society's AOU code." />
 <meta property="og:image" content="http://trashbirdecology.github.io/bbsAssistant/logo.png" />
 
 
@@ -66,7 +67,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -128,102 +129,33 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Taxonomic information from teh American Ornithological Society's AOU code.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/trashbirdecology/bbsAssistant/blob/master/R/data.R'><code>R/data.R</code></a></small>
+    <div class="hidden name"><code>species_list.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Taxonomic information from teh American Ornithological Society's AOU code.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='va'>species_list</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="bbs_obs.html">bbs_obs</a></code> </p>
-        </td>
-        <td><p>Contains the most recent release of the BBS observations dataset.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="dot-onAttach.html">.onAttach()</a></code> </p>
-        </td>
-        <td><p>.onAttach start message</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="download_bbs_data.html">download_bbs_data()</a></code> </p>
-        </td>
-        <td><p>Download the BBS dataset files associated with a single ScienceBase identifier</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_bbs_data.html">get_bbs_data()</a></code> </p>
-        </td>
-        <td><p>One-stop shop for downloading and importing the USGS Breeding Bird Survey observations data.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="import_bbs_data.html">import_bbs_data()</a></code> </p>
-        </td>
-        <td><p>Read BBS data from local file into R environment.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="import_routes.html">import_routes()</a></code> </p>
-        </td>
-        <td><p>Import the route-level covariates/metadata associated with the BBS dataset.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="import_vehicle_data.html">import_vehicle_data()</a></code> </p>
-        </td>
-        <td><p>Import the VehicleData (number of vehicles observed during each stop).</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="import_weather.html">import_weather()</a></code> </p>
-        </td>
-        <td><p>Import the weather conditions associated with route-level observations.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="region_codes.html">region_codes</a></code> </p>
-        </td>
-        <td><p>Country and state codes and associated zip filenames</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="sb_items.html">sb_items</a></code> </p>
-        </td>
-        <td><p>A lookup table that is manually updated by the package maintainers. It is used as a quick reference to identify which datasets are available for import from ScienceBase, and are compatible with this package.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="species_list.html">species_list</a></code> </p>
-        </td>
-        <td><p>Taxonomic information from teh American Ornithological Society's AOU code.</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A data frame with 2158 rows and 17 variables.</p><dl>
+<dt>AOU</dt><dd><p>Numeric AOU code.</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Most recent version of AOU at <a href='http://checklist.aou.org/taxa.csv?type=charset%3Dutf-8%3Bsubspecies%3Dno%3B'>http://checklist.aou.org/taxa.csv?type=charset%3Dutf-8%3Bsubspecies%3Dno%3B</a></p>
+<p>Most recent version of species list associated with BBS data at SpeciesList.txt at <a href='http://checklist.aou.org/taxa.csv?type=charset%3Dutf-8%3Bsubspecies%3Dno%3B"'>http://checklist.aou.org/taxa.csv?type=charset%3Dutf-8%3Bsubspecies%3Dno%3B"</a></p>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
