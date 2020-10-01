@@ -53,6 +53,18 @@
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="articles/simple.html">simple</a>
+    </li>
+  </ul>
+</li>
 <li>
   <a href="news/index.html">Changelog</a>
 </li>
@@ -110,11 +122,10 @@ Burnett et al., (2019). bbsAssistant: An R package for downloading and handling 
 </h3>
 <p>Install the development version of this package using devtools and load the package and dependencies:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="kw">devtools</span>::<span class="fu">install_github</span>(<span class="st">"trashbirdecology/bbsAssistant"</span>, 
-                         ref=<span class="st">"main"</span>, <span class="co"># ensure it pulls from the 'main' branch. function defaults to 'master' branch, otherwise.</span>
-                         force=<span class="fl">TRUE</span>) <span class="co"># force to get most recent dev version</span>
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/trashbirdecology/bbsAssistant">bbsAssistant</a></span>)
-</pre></div>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"trashbirdecology/bbsAssistant"</span>, 
+                         ref<span class="op">=</span><span class="st">"main"</span>, <span class="co"># ensure it pulls from the 'main' branch. function defaults to 'master' branch, otherwise.</span>
+                         force<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span> <span class="co"># force to get most recent dev version</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/trashbirdecology/bbsAssistant">bbsAssistant</a></span><span class="op">)</span></pre></div>
 </div>
 </div>
 <div id="quick-start-1" class="section level2">
@@ -123,12 +134,10 @@ Burnett et al., (2019). bbsAssistant: An R package for downloading and handling 
 <p>Start here to quickly retrieve the most recent version of the BBS observations dataset (this dataset currently contains &gt;6.5 million rows). The BBS datasets are typically released on an annual basis, and comprise the QA/QC’d dataset containing observations from years 1966 to the most recent. <strong>Unless you are reproducing analyses of historical versions of the BBS annual releases, the most recent release should suffice for your purposes.</strong></p>
 <p>We have stored a data package inside <code>bbsAssistant</code> called <strong>bbs_recent</strong> containing the most recent observations dataset. Retrieve the most recent data in the package:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="kw">data</span> <span class="op">&lt;-</span> <span class="kw">bbsAssistant</span>::<span class="kw"><a href="reference/bbs_obs.html">bbs_obs</a></span>
-</pre></div>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">bbsAssistant</span><span class="fu">::</span><span class="va"><a href="reference/bbs_obs.html">bbs_obs</a></span></pre></div>
 <p>or download the data files directly:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="kw">sb_id</span> <span class="op">=</span> <span class="st">"5ea04e9a82cefae35a129d65"</span> <span class="co">#specify the item identifier </span>
-</pre></div>
+<span class="va">sb_id</span> <span class="op">=</span> <span class="st">"5ea04e9a82cefae35a129d65"</span> <span class="co">#specify the item identifier </span></pre></div>
 </div>
 <div id="bbs-data-availability" class="section level2">
 <h2 class="hasAnchor">
@@ -301,13 +310,11 @@ Burnett et al., (2019). bbsAssistant: An R package for downloading and handling 
 <a href="#how-to-cite-the-data" class="anchor"></a>How to Cite the Data</h2>
 <p>Easily retrieve the text citation for the specified dataset using <code>sbtools</code>:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="kw">sbtools</span>::<span class="fu"><a href="https://rdrr.io/pkg/sbtools/man/item_get_fields.html">item_get_fields</a></span>(<span class="kw">sb_id</span>, <span class="st">"citation"</span>)
-</pre></div>
+<span class="fu">sbtools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/sbtools/man/item_get_fields.html">item_get_fields</a></span><span class="op">(</span><span class="va">sb_id</span>, <span class="st">"citation"</span><span class="op">)</span></pre></div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">## [1] "Pardieck, K.L., Ziolkowski Jr., D.J., Lutmerding, M., Aponte, V.I., and Hudson, M-A.R., 2020, North American Breeding Bird Survey Dataset 1966 - 2019: U.S. Geological Survey data release, https://doi.org/10.5066/P9J6QUF6."</span></span></code></pre></div>
 <p>If you use the package data, the text citations are available in the package citation file:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span>(<span class="st">"bbsAssistant"</span>)
-</pre></div>
+<span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span><span class="st">"bbsAssistant"</span><span class="op">)</span></pre></div>
 <div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">## </span></span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="co">## To cite the R package bbsAssistant, please use: To cite the most recent</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="co">## version of the Breeding Bird Survey dataset, please use: To cite a</span></span>
@@ -329,8 +336,7 @@ Burnett et al., (2019). bbsAssistant: An R package for downloading and handling 
 <span id="cb7-19"><a href="#cb7-19"></a><span class="co">## bibtex=TRUE)', 'toBibtex(.)', or set</span></span>
 <span id="cb7-20"><a href="#cb7-20"></a><span class="co">## 'options(citation.bibtex.max=999)'.</span></span></code></pre></div>
 <div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="co"># print(citation("bbsAssistant"), bibtex=TRUE)# for bibtex</span>
-</pre></div>
+<span class="co"># print(citation("bbsAssistant"), bibtex=TRUE)# for bibtex</span></pre></div>
 </div>
 
   </div>
