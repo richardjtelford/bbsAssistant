@@ -206,9 +206,7 @@
 <span class="co"># glimpse(bbs_data$weather) # weather associated with route data</span></pre></div>
 <div class="sourceCode" id="cb5"><pre class="downlit">
 <span class="co"># nrow(df[df$SpeciesTotal==0,])## ensuring this is presence-only data</span>
-
 <span class="va">nyears.per.spproute</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">%&gt;%</span> 
-  <span class="co"># mutate(AOU=as.factor(AOU)) %&gt;% </span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">CountryNum</span>, <span class="va">StateNum</span>, <span class="va">Route</span>, <span class="va">AOU</span><span class="op">)</span> <span class="op">%&gt;%</span> 
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>nyears<span class="op">=</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="co"># number of years of observations per species per route (by country/state route id)</span>
 <span class="co">#&gt; `summarise()` regrouping output by 'CountryNum', 'StateNum', 'Route' (override with `.groups` argument)</span>
