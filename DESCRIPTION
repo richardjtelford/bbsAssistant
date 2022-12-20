@@ -25,7 +25,6 @@ Imports:
     readr,
     sbtools,
     stringr,
-    usethis,
     utils
 Suggests: 
     spelling,
