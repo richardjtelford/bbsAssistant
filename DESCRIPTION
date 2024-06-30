@@ -25,9 +25,9 @@ Imports:
     readr,
     sbtools,
     stringr,
-    usethis,
     utils
 Suggests: 
+    usethis,
     spelling,
     testthat (>= 3.0.0)
 Language: en-US
